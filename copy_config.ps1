@@ -10,8 +10,13 @@ foreach ($file in $files) {
 
     if (Test-Path $sourceFile) {
         Copy-Item -Path $sourceFile -Destination $destinationFile -Force
-        Write-Host "Copiato: $sourceFile -> $destinationFile"
+        Write-Host "Copied: $sourceFile -> $destinationFile"
     } else {
-        Write-Host "File non trovato: $sourceFile"
+        Write-Host "File not found: $sourceFile"
     }
 }
+
+git add .
+git commit -m "configs"
+git push -u origin main
+Write-Host "Pushed to git"
