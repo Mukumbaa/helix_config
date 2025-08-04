@@ -43,7 +43,7 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 "A-C-[" = "@f[lmi<A-C-[>"
 "A-C-{" = "@f{lmi<A-C-{>"
 
-[keys.normal."+"]
+[keys.normal." "."c"]
 "+" = ":config-open"
 "*" = ":config-reload"
 "l" = ":open C:\\Users\\Gabry\\AppData\\Roaming\\helix\\languages.toml"
