@@ -36,18 +36,11 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 
 [keys.normal."m"]
 "w" = "@miw"
-"W" = "@miW"
-"\"" = "@f\"lmi\""
-"'" = "@f'lmi'"
-"(" = "@f(lmi("
-"A-C-[" = "@f[lmi<A-C-[>"
-"A-C-{" = "@f{lmi<A-C-{>"
 
 [keys.normal." "."c"]
 "c" = ":config-open"
-"r" = ":config-reload"
 "l" = ":open C:\\Users\\Gabry\\AppData\\Roaming\\helix\\languages.toml"
-
+"r" = ":config-reload"
 
 [keys.normal]
 "esc" = ":w!"
@@ -76,9 +69,6 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 #universal yank/paste
 "y" = "yank_main_selection_to_clipboard"
 "p" = "paste_clipboard_after"
-#go to start and end of line
-"A-s" = "goto_line_start" 
-"A-e" = "goto_line_end"
 #remap to trim whitespacese and for b to face always forward
 "w" = ["move_next_word_end","trim_selections"]
 "b" = ["flip_selections","move_prev_word_start","trim_selections","flip_selections"]
