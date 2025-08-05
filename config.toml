@@ -101,6 +101,8 @@ esc = [":w!", "normal_mode"]
 esc = ["normal_mode",":write-all!"]
 #select the next occurence of the selected text
 "C-d" = ["search_selection", "extend_search_next"]
+"y" = "yank_main_selection_to_clipboard"
+"p" = "paste_clipboard_after"
 
 [editor.statusline]
 left = [
