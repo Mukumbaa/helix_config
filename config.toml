@@ -48,6 +48,7 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 "r" = ":config-reload"
 "l" = ":open C:\\Users\\Gabry\\AppData\\Roaming\\helix\\languages.toml"
 
+
 [keys.normal]
 "esc" = ":w!"
 "A-b" = ":buffer-close"
