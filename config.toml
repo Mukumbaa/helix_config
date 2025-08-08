@@ -11,6 +11,7 @@ completion-trigger-len = 1
 end-of-line-diagnostics = "hint"
 auto-completion = true
 
+
 [editor.soft-wrap]
 enable = true
 max-wrap = 25 # increase value to reduce forced mid-word wrapping
@@ -73,7 +74,8 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 "w" = ["move_next_word_end","trim_selections"]
 "b" = ["flip_selections","move_prev_word_start","trim_selections","flip_selections"]
 "A-d" = ["yank_main_selection_to_clipboard", "delete_selection"]
-"A-x" = "@gsvgl<esc>"
+#go back one line
+"X" = ["extend_line_up", "extend_to_line_bounds"]
 "D" =["goto_first_nonwhitespace", "select_mode", "goto_line_end", "change_selection"]
 
 [keys.insert]
@@ -98,26 +100,28 @@ esc = ["normal_mode",":write-all!"]
 [editor.statusline]
 left = [
   "mode", 
-  "spacer",
+  "separator",
   "spinner", 
-  "spacer",
-  "version-control"
+  "separator",
+  "version-control",
+  "separator",
+  "file-modification-indicator"
 ]
 center = ["file-name"]
 right = [ 
   "diagnostics",
-  "spacer",
+  "separator",
   "selections",
-  "spacer",
+  "separator",
   "position",
-  "spacer",
+  "separator",
   "file-encoding",
-  "spacer",
+  "separator",
   "file-line-ending",
-  "spacer",
+  "separator",
   "file-type",
 ]
-separator = "  "
+separator = " "
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
