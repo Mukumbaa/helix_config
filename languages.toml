@@ -43,7 +43,7 @@ language-servers = [
 [[language]]
 name = "go"
 auto-format = false
-language-servers = [ "gopls"]
+language-servers = [ "gopls" ]
 #golangci-lint-lsp had some problems for me so i said no
 # , "golangci-lint-lsp" ]
 
@@ -51,7 +51,7 @@ language-servers = [ "gopls"]
 # command = "golangci-lint-langserver"
 
 # [language-server.golangci-lint-lsp.config]
-# command = ["golangci-lint", "run", "--output-format json", "stdout", "--show-stats=false", "--issues-exit-code=1"]
+# command = ["golangci-lint", "run", "--show-stats=false", "--issues-exit-code=1"]
 # formatter = { command = "goimports" }
 
 # C

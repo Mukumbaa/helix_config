@@ -37,6 +37,7 @@ layout = ["diagnostics", "line-numbers", "spacer", "spacer"]
 
 [keys.normal."m"]
 "w" = "@miw"
+"t" = "@T<S-gt>;vt<lt><esc>"
 
 [keys.normal." "."c"]
 "c" = ":config-open"
@@ -121,7 +122,7 @@ right = [
   "separator",
   "file-type",
 ]
-separator = " "
+separator = ""
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
