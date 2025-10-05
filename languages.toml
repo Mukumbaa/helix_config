@@ -1,6 +1,6 @@
 # PYTHON
+# (in the venv)
 # pip install ruff basedpyright
-# (also in the venv)
 
 [[language]]
 name = "python"
@@ -37,22 +37,10 @@ language-servers = [
 # go install golang.org/x/tools/cmd/goimports@latest                    # Formatter
 # go install github.com/go-delve/delve/cmd/dlv@latest                   # Debugger
 # go install golang.org/x/tools/gopls@latest && go install github.com/nametake/golangci-lint-langserver@latest && go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest && go install golang.org/x/tools/cmd/goimports@latest && go install github.com/go-delve/delve/cmd/dlv@latest
-# [[language]]
-# name = "go"
-# auto-format = false
 [[language]]
 name = "go"
 auto-format = false
 language-servers = [ "gopls" ]
-#golangci-lint-lsp had some problems for me so i said no
-# , "golangci-lint-lsp" ]
-
-# [language-server.golangci-lint-lsp]
-# command = "golangci-lint-langserver"
-
-# [language-server.golangci-lint-lsp.config]
-# command = ["golangci-lint", "run", "--show-stats=false", "--issues-exit-code=1"]
-# formatter = { command = "goimports" }
 
 # C
 # scoop bucket add versions
@@ -65,3 +53,16 @@ file-types = ["c", "h"]
 [[language]]
 name = "cpp"
 file-types = ["cpp", "hpp", "cc", "hh"]
+
+
+# rustup install stable-x86_64-pc-windows-gnu
+# rustup default stable-x86_64-pc-windows-gnu
+# cargo install --git https://github.com/Myriad-Dreamin/tinymist --locked tinymist-cli
+# rustup install stable-x86_64-pc-windows-gnu && rustup default stable-x86_64-pc-windows-gnu && cargo install --git https://github.com/Myriad-Dreamin/tinymist --locked tinymist-cli 
+[language-server.tinymist]
+command = "tinymist"
+config = { preview = { background = { enabled = true, args = [
+  "--data-plane-host=127.0.0.1:23635",
+  "--invert-colors=never",
+  "--open"
+] } } }
